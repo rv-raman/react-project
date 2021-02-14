@@ -8,6 +8,10 @@ class CartItem extends React.Component{
         qty:1,
         img:''
     }
+    //this.increaseQuantity=this.increaseQuantity.bind(this)
+   }
+   increaseQuantity=()=>{
+       console.log('this', this.state);
    }
     render(){
         const{price,title,qty}=this.state;
@@ -22,9 +26,24 @@ class CartItem extends React.Component{
                     <div style={{color:'#777'}}>Qty: {qty}</div>
                     <div className="cart-item-actions">
                         {/*button*/}
-                        <img alt="increase" className="action-icons" src="https://as1.ftcdn.net/jpg/02/51/03/82/500_F_251038282_CLb3d8tk99bGoU9ILEYS8vY215fgRmGT.jpg"/>
-                        <img alt="decrease" className="action-icons" src="https://as1.ftcdn.net/jpg/03/73/49/86/500_F_373498649_nBxauQ0ipBSVrVcMpWWVmTpXu3BLvRyY.jpg"/>
-                        <img alt="delete" className="action-icons" src="https://as2.ftcdn.net/jpg/03/73/50/09/500_F_373500918_7vISJB85YXvvu7SgnpktP752LWRrLzyI.jpg"/> 
+                        <img 
+                        alt="increase" 
+                        className="action-icons" 
+                        src="https://as1.ftcdn.net/jpg/02/51/03/82/500_F_251038282_CLb3d8tk99bGoU9ILEYS8vY215fgRmGT.jpg"
+                        onClick={this.increaseQuantity}
+                        />
+                        
+                        <img 
+                        alt="decrease" 
+                        className="action-icons" 
+                        src="https://as1.ftcdn.net/jpg/03/73/49/86/500_F_373498649_nBxauQ0ipBSVrVcMpWWVmTpXu3BLvRyY.jpg"
+                        />
+                        
+                        <img 
+                        alt="delete" 
+                        className="action-icons" 
+                        src="https://as2.ftcdn.net/jpg/03/73/50/09/500_F_373500918_7vISJB85YXvvu7SgnpktP752LWRrLzyI.jpg"
+                        /> 
                     </div>
                 </div>
             </div>
